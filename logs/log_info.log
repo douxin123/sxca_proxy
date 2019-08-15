@@ -1,0 +1,71 @@
+2019-08-15 11:55:37.350 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:50  - Starting SxcaProxyAdminApplication on pc-PC with PID 11268 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 11:55:37.350 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:647 - No active profile set, falling back to default profiles: default
+2019-08-15 11:55:38.234 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:55:38.241 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2019-08-15 11:55:38.241 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 11:55:38.346 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2019-08-15 11:55:38.452 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 11:55:38.544 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 11:55:38.960 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:55:38.977 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:59  - Started SxcaProxyAdminApplication in 1.937 seconds (JVM running for 2.772)
+2019-08-15 11:57:25.652 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:50  - Starting SxcaProxyAdminApplication on pc-PC with PID 10720 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 11:57:25.653 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:647 - No active profile set, falling back to default profiles: default
+2019-08-15 11:57:26.725 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:57:26.731 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2019-08-15 11:57:26.731 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 11:57:26.871 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2019-08-15 11:57:26.947 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 11:57:27.062 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 11:57:27.562 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:57:27.584 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:59  - Started SxcaProxyAdminApplication in 2.293 seconds (JVM running for 3.122)
+2019-08-15 11:58:38.252 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:50  - Starting SxcaProxyAdminApplication on pc-PC with PID 9788 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 11:58:38.252 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:647 - No active profile set, falling back to default profiles: default
+2019-08-15 11:58:39.131 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:58:39.136 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2019-08-15 11:58:39.137 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 11:58:39.227 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2019-08-15 11:58:39.335 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 11:58:39.431 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 11:58:39.870 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 11:58:39.887 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:59  - Started SxcaProxyAdminApplication in 1.978 seconds (JVM running for 2.663)
+2019-08-15 12:02:06.443 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:48  - Starting SxcaProxyAdminApplication on pc-PC with PID 5336 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 12:02:06.444 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:593 - No active profile set, falling back to default profiles: default
+2019-08-15 12:02:07.860 INFO  org.apache.catalina.core.StandardService Line:179 - Starting service [Tomcat]
+2019-08-15 12:02:07.861 INFO  org.apache.catalina.core.StandardEngine Line:179 - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-08-15 12:02:07.950 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/repeat] Line:179 - Initializing Spring embedded WebApplicationContext
+2019-08-15 12:02:08.194 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 12:02:08.539 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 12:02:09.630 INFO  org.apache.coyote.http11.Http11NioProtocol Line:179 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:02:09.636 INFO  org.apache.coyote.http11.Http11NioProtocol Line:179 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:02:09.643 INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179 - Using a shared selector for servlet write/read
+2019-08-15 12:02:09.658 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:57  - Started SxcaProxyAdminApplication in 3.448 seconds (JVM running for 4.291)
+2019-08-15 12:02:34.451 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:50  - Starting SxcaProxyAdminApplication on pc-PC with PID 10612 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 12:02:34.451 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:646 - No active profile set, falling back to default profiles: default
+2019-08-15 12:02:35.523 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:02:35.530 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2019-08-15 12:02:35.530 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-15 12:02:35.693 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2019-08-15 12:02:35.776 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 12:02:35.888 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 12:02:36.385 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:02:36.405 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:59  - Started SxcaProxyAdminApplication in 2.3 seconds (JVM running for 3.151)
+2019-08-15 12:02:47.502 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 12:03:26.076 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:48  - Starting SxcaProxyAdminApplication on pc-PC with PID 6836 (D:\new_work\sxca_proxy\sxca_proxy_admin\target\classes started by pc in D:\new_work\sxca_proxy)
+2019-08-15 12:03:26.076 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:593 - No active profile set, falling back to default profiles: default
+2019-08-15 12:03:27.476 INFO  org.apache.catalina.core.StandardService Line:179 - Starting service [Tomcat]
+2019-08-15 12:03:27.477 INFO  org.apache.catalina.core.StandardEngine Line:179 - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-08-15 12:03:27.566 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/repeat] Line:179 - Initializing Spring embedded WebApplicationContext
+2019-08-15 12:03:27.798 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  - Init DruidDataSource
+2019-08-15 12:03:28.155 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 - {dataSource-1} inited
+2019-08-15 12:03:29.268 INFO  org.apache.coyote.http11.Http11NioProtocol Line:179 - Initializing ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:03:29.275 INFO  org.apache.coyote.http11.Http11NioProtocol Line:179 - Starting ProtocolHandler ["http-nio-8098"]
+2019-08-15 12:03:29.285 INFO  org.apache.tomcat.util.net.NioSelectorPool Line:179 - Using a shared selector for servlet write/read
+2019-08-15 12:03:29.299 INFO  cn.com.trade365.sxca_proxy_admin.SxcaProxyAdminApplication Line:57  - Started SxcaProxyAdminApplication in 3.479 seconds (JVM running for 4.278)
+2019-08-15 12:03:31.562 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/repeat] Line:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-15 12:03:31.606 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-08-15 12:03:31.631 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-08-15 12:03:31.631 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-08-15 12:03:31.631 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-08-15 12:03:31.632 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-08-15 12:03:31.642 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-08-15 12:03:36.016 INFO  cn.com.trade365.sxca_proxy_admin.controller.MessageController Line:60  - 接收到的: status=null; exception=null; msgData=null 

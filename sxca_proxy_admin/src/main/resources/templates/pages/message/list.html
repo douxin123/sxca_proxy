@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:include="pages/header">
+</head>
+<body>
+<section class="content-header">
+    <h1>日志管理</h1>
+</section>
+<section style="margin-top:20px; margin-left:20px;">
+    状态：<input th:type="text" th:id="status" th:name="status" />
+    异常：<input th:type="text" th:id="exception" th:name="exception" />
+    消息内容：<input th:type="text" th:id="msgData" th:name="msgData" />
+    <button onclick="customSearch()" >搜索</button>
+</section>
+<section class="content table-content">
+
+    <table id="dataGrid"></table>
+</section>
+<div th:include="pages/footer"></div>
+</body>
+<script type="text/javascript">
+    $table = $("#dataGrid");
+    $(function () {
+        initDataGrid();
+    });
+
+    function initDataGrid() {
+        $table.bootstrapTable({
+            // height: tableModel.getHeight(),
+            idField: "id",
+            columns: [[
+                {title: "id", field: "id"},
+                {title: "消息状态", field: "status"},
+                {title: "异常信息", field: "smallException",cardView: false,width:"30%"},
+                {title: "接收时间", field: "acceptTime"},
+                {title: "消息内容", field: "data"},
+                {title: "返回时间", field: "finishTime"},
+                {title: "尝试次数", field: "retry"},
+                {
+                    title: '操作',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        var update = '<a href="javascript:retry(\'' + row.id + '\')">重试</a> ';
+                        return update ;
+                    }
+                }
+            ]],
+            url: 'message/search',
+            queryParams: function (params) {
+                var status=document.getElementById("status").value;
+                params.search="";
+                if(status !=""){
+                    params.status=status;
+                }
+                var msgData=document.getElementById("msgData").value;
+                if(msgData !=""){
+                    params.msgData=msgData;
+                }
+                var exception=document.getElementById("exception").value;
+                if(exception !=""){
+                    params.exception=exception;
+                }
+                return params;
+            },
+            responseHandler: function (res) {
+                return {
+                    rows: res.pageInfo.list,
+                    total: res.pageInfo.total
+                }
+            },
+            striped: true,        //是否显示行间隔色
+            searchOnEnterKey: true,
+            sortName : 'acceptTime',
+            undefinedText:'null',
+            sortOrder : 'desc',
+            trimOnSearch:true,
+            locale:'zh-CN',                                              //中文支持
+            pagination: true,                                        //是否开启分页（*）
+            pageNumber:1,                                            //初始化加载第一页，默认第一页
+            sidePagination: 'server',
+            pageSize: 5,
+            pageList: [5, 10],
+            detailView: true,
+//注册加载子表的事件。你可以理解为点击父表中+号时触发的事件
+            onExpandRow: function(index, row, $detail) {
+                //这一步就是相当于在当前点击列下新创建一个table
+                var cur_table = $detail.html('<table></table>').find('table');
+                var html = "";
+                html += "<p>";
+                $.ajax({
+                    type: "get",
+                    url: "message/exception/detail",       //子表请求的地址
+                    data: {id: row.id},//我这里是点击父表后，传递父表列id和nama到后台查询子表数据
+                    async: false,           //很重要，这里要使用同步请求
+                    success: function (data) {
+                        html+=data.data;
+                        html+="</p>";
+                        $detail.html(html);
+                    }
+                });
+            }
+        });
+    }
+    function retry(id) {
+        $.ajax({
+            type: "post",
+            url: "message/exception/retry?id="+id,
+            // async: false,
+            success: function (data) {
+                let result=JSON.parse(data);
+                if(result == 200) {
+                    $('#dataGrid').bootstrapTable('refresh');
+                }else {
+                    alert("重试失败");
+                }
+            }
+
+        });
+    }
+    function customSearch(){
+        $('#dataGrid').bootstrapTable('refresh');
+    }
+</script>
+</html>

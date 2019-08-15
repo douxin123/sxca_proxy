@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="task_table">
+
+
+
+</table>
+
+<script>
+$('#task_table').bootstrapTable({
+
+            method: 'post',
+            striped: true,
+            clickToSelect: true,
+            pagination: true,
+            toolbar: '#toolbar',
+            sortable: false,
+            sortOrder: "desc",
+            pageNumber: 1,
+            pageSize: 10,
+            pageList: [10, 20, 30],
+            url: ctx + url,
+            queryParamsType: 'normal',
+            queryParams: queryParams,
+            sidePagination: "server",
+            search: false,
+            strictSearch: true,
+            showColumns: true,
+            showRefresh: true,
+            minimumCountColumns: 1,
+            clickToSelect: true,
+            searchOnEnterKey: true,
+            silent: true,
+            idField: "object_id",
+            detailView:true,
+            detailFormatter:function(index,row){
+            var str = "<form class='form-horizontal'> ";
+                str+= "<div class='fix-margin-horizontal form-group' style='margin-left:10%'>";
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>";
+                    if(row.isbn==undefined){
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                    }else{
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.isbn+"</span></div>";
+                    }
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>";
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.language+"</span></div>";
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>责任编辑：</label>";
+                    if(row.editor_view==undefined){
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                    }else{
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.editor_view+"</span></div>";
+                    }
+                str+= "</div><div class='hr-line-dashed'></div>";
+             
+            str+= "<div class='fix-margin-horizontal form-group' style='margin-left:10%'>";
+                str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>版次/制作：</label>";
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.edition_year+'年'+row.edition_month+'月第'+row.edition+'版'+"</span></div>";
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>印&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;次：</label>";
+                    if(row.print_year==undefined){
+                        str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                    }else{
+                        str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.print_year+'年'+row.print_month+'月第'+row.print+'次'+"</span></div>";
+                    }
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>校对次数：</label>";
+                    if(row.proofread_num==undefined){
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                    }else{
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.proofread_num+"</span></div>";
+                    }
+                str+= "</div><div class='hr-line-dashed'></div>";
+             
+            str+= "<div class='fix-margin-horizontal form-group' style='margin-left:10%'>";
+                str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>千&nbsp;&nbsp;字&nbsp;数：</label>";
+                if(row.th_words==undefined){
+                str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                }else{
+                str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.th_words+"</span></div>";
+                }
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>季&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</label>";
+                    if(row.quarter==undefined){
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>-</span></div>";
+                    }else{
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.quarter+"</span></div>";
+                    }
+                    str+= "<label class='col-sm-fix-2 control-label padding-no-horizontal'>部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门：</label>";
+                    str+= "<div class='col-sm-fix-4'><span class='form-control' style='border:0px;'>"+row.department_name+"</span></div>";
+                str+= "</div></form>";
+            return str;
+            },
+            columns: [{
+                field: "state",
+                checkbox: true,
+                align: 'center'
+            }, /*{
+                field: 'object_id',
+                title: 'ID',
+                align: 'center'
+            },*/ {
+                field: 'name',
+                title: '名称',
+                align: 'left',
+                formatter:function(value,row,index){
+return "<a onclick='book_detail("+row.object_id+");'>"+value+"</a>";
+}
+            }/*,{
+                field: 'isbn',
+                title: '书号',
+                align: 'center'
+            }*/, {
+                field: 'type',
+                title: '类型',
+                align: 'center',
+                formatter:function(value,row,index){
+                    return typeArray[value];
+                }
+            }, {
+                field: 'year',
+                title: '年度',
+                align: 'center'
+            }/*, {
+                field: 'edition',
+                title: '版次/制作',
+                align: 'center',
+                formatter:function(value,row,index){
+                if(value){
+                var str = row.edition_year+"年"+row.edition_month+"月第"+value+"版";
+                         return str;
+                }else{
+                return value;
+                }
+                   
+                }
+            }, {
+                field: 'print',
+                title: '印次',
+                align: 'center',
+                formatter:function(value,row,index){
+                    if(value){
+                var str = row.print_year+"年"+row.print_month+"月第"+value+"次";
+                    return str;
+                }else{
+                return value;
+                }
+                }
+            }*/, {
+                field: 'language',
+                title: '文别',
+                align: 'center'
+            }, {
+                field: 'busi_type',
+                title: '编订类别',
+                align: 'center',
+                formatter:function(value,row,index){
+                    return busiTypeArray[value];
+                }
+            }, {
+                field: 'editor_view',
+                title: '责任编辑',
+                align: 'center'
+            }, {
+                field: 'editor',
+                title: '责任编辑',
+                align: 'center',
+                visible:false
+            },{
+            field: 'object_id',
+                title: '操作',
+                align: 'center',
+                formatter:function(value,row,index){
+                var array = row.module_array;
+                var str = "";
+                var key;
+                    if(array){
+                        for(var i=0;i<array.length; i++){
+                            key =  array[i];
+                            if(key){
+                                key = key.substring(key.lastIndexOf("_")+1,key.length);
+                                var style = "style='font-size:12px;'";
+                                if(i>0){
+                                    style = "style='margin-left: 15px;font-size:12px;'";
+                                }
+                                if(key=="110"){
+                                    str+="<a class='label label-primary' "+style+" onclick='activiti.kit_go(\""+ array[i] +"\",\""+key+"\",\""+value+"\")'>印前检查</a>";
+                                }else if(key=="911"){
+                                str+="<a class='label label-primary' "+style+" onclick='activiti.kit_go(\""+ array[i] +"\",\""+key+"\",\""+value+"\")'>确定编订类别</a>";
+                                }else{
+                                    str+="<a class='label label-primary' "+style+" onclick='activiti.kit_go(\""+ array[i] +"\",\""+key+"\",\""+value+"\")'>"+processTypeArray[key]+"</a>";
+                                }
+                            }
+                        }
+                    }else{
+                    str="-";
+                    }
+               return str;
+                }
+            },{
+                field: 'status',
+                title: '状态',
+                align: 'center',
+                formatter:function(value,row,index){
+                    if(value==0){
+                        return "<span class='label label-primary'>待下发</span>";
+                    }else if(value==1){
+                        return "<span class='label label-danger'>已分配</span>";
+                    }else if(value==2){
+                        return "<span class='label label-warning'>待签收</span>";
+                    }else if(value==3){
+                        return "<span class='label label-success'>已签收</span>";
+                    }else if(value==6){
+                        return "<span class='label label-success'>待发印</span>";
+                    }
+                }
+            }, {
+                field: 'agreement_id',
+                title: '合同',
+                align: 'center',
+                formatter:function(value,row,index){
+                    if(value){
+                        return "<a href='JavaScript:task.seeAgreement("+value+");'><span class='glyphicon glyphicon-briefcase' aria-hidden='true'></span></a>";
+                    }else{
+                        return "-"
+                    }
+                }
+            }, {
+                field: 'object_id',
+                title: '文件',
+                align: 'center',
+                formatter:function(value,row,index){
+                    return "<i class='glyphicon glyphicon-folder-open' style='cursor:pointer;' aria-hidden='true' onclick='task.fileview(\""+row.object_id+"\",\""+typeArray[row.type]+"\",\""+busiTypeArray[row.busi_type]+"\")'></i>";
+                }
+            }, {
+                field: 'object_id',
+                title: '进度',
+                align: 'center',
+                formatter:function(value,row,index){
+                    return "<a href='JavaScript:task.seeSchedule("+value+");'><span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span></a>";
+                }
+            }, {
+                field: 'create_date',
+                title: '创建时间',
+                align: 'center'
+            }]
+        })
+    }</script>
+</body>
+</html>
